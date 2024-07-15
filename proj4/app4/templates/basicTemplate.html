@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: lightblue;
+            padding: 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0px 10px;
+            border-radius: 5px;
+            background-color: #555;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: aqua;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        nav li {
+            margin-right: 20px;
+            margin-bottom: 25px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightgray;
+            text-align: center;
+        }
+    </style>
+    <title>{% block title %}Student Course Registration Portal{% endblock %}</title>
+</head>
+<body>
+    <center>
+        <h1 style="background-color: blue; color: yellow; padding: 10px;">STUDENT COURSE REGISTRATION PORTAL</h1>
+    </center>
+    <nav>
+        <ul>
+            <li><a href="/home/">HOME</a></li>
+            <li><a href="/studentlist/">STUDENT LIST</a></li>
+            <li><a href="/courselist/">COURSE LIST</a></li>
+            <li><a href="/register/">REGISTER</a></li>
+            <li><a href="/enrolledlist/">ENROLLED LIST</a></li>
+            <li><a href="/addproject/">ADD PROJECT</a></li>
+            <li><a href="/genericlistviewstudent/">GENERIC STUDENT LIST VIEW</a></li>
+            <li><a href="/download_course_table_as_csv/">DOWNLOAD COURSE AS CSV</a></li>
+            <li><a href="/download_course_table_as_pdf/">DOWNLOAD COURSE AS PDF</a></li>
+        </ul>
+    </nav>
+    <section>
+        {% block content %}{% endblock %}
+    </section>
+    <footer>
+        <hr/>
+        <center>&copy; Designed and Developed by RNSIT, Dept. of CSE, Bangalore-04</center>
+    </footer>
+</body>
+</html>
